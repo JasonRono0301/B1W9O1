@@ -2,10 +2,12 @@
 //01-11-2020.
 //Horeca App. 
 
-//Een variabele om de applicatie te starten.
-var startDrank = horecaDrank();
+//Het aantal waar de drank aantallen beginnen. En worden als globale vars gebruikt.
+var frisAantal = 0;
+var bierAantal = 0;
+var wijnAantal = 0;
 
-//Hieronder staan de dranken prijzen.
+//De drank prijzen.
 const FRIS = 2.00;
 const BIER = 4.00;
 const WIJN = 5.00;
@@ -16,20 +18,12 @@ function horecaDrank() {//De gehele functie drank van de applicatie.
 	var drankbestelling = prompt('Type in "drank"');
 
 		if (drankbestelling == "drank") {
-			drank();
+			drankKeuze();
 		} else{
 			alert("U heeft een ongeldige invoer gedaan");
-			horecaDrank();
 		}
 
-	function drank(){//Een functie om de dranken te bestellen.
-		alert('Welkom bij de drankbestelling');
-		alert('Welk bestelling wilt u toevoegen?');
-
-		for(drankVraag = 0; drankVraag != "stop"; drankVraag++){
-			drankVraag = prompt('fris of bier of wijn?');
-		}
-
-
-	}
 }
+
+//De functie word aangeroepen.
+horecaDrank();
